@@ -1,4 +1,4 @@
-package src.main.java;
+package src.main.java.card;
 
 public abstract class AbstractCard implements ICard{
 

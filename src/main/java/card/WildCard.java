@@ -1,4 +1,4 @@
-package src.main.java;
+package src.main.java.card;
 
 public class WildCard extends AbstractCard {
 
