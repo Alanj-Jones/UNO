@@ -1,30 +1,34 @@
 package src.main.java.card;
 
+import java.util.Objects;
+
 public class WildCard extends AbstractCard {
+
+    public WildCard(CardType type) {
+        super(type, null);
+    }
 
     public WildCard(CardType type, CardColor color) {
         super(type, color);
-        //TODO Auto-generated constructor stub
+        CardUtil.validateColor(color);
+        
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO Auto-generated method stub
-        return false;
+        return (this == o);
     }
 
     @Override
     public int hashCode() {
-        // TODO Auto-generated method stub
-        return 0;
+        return Objects.hash(getType(),getColor());
     }
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    
+        return "Wild Card{" +
+                getType() + ", " +
+                getColor() + "}";
+    }    
     
 }
