@@ -3,12 +3,13 @@ package src.main.java.player;
 import java.util.UUID;
 import java.util.stream.Stream;
 
+import src.main.java.card.CardUtil;
 import src.main.java.card.ICard;
 
 public class Player extends Entity{
 
-    public Player(UUID id, String name, HandCardList hand) {
-        super(id);
+    public Player(String name, HandCardList hand) {
+        super();
         this.name= name;
         this.handCards = hand;
     }
@@ -18,20 +19,19 @@ public class Player extends Entity{
     }
 
     public Stream<ICard> getHandCards() {
-        return null;
-        
+        return handCards.getCardStream();        
     }
 
     public void addToHandCards(ICard card) {
-
+        handCards.addCard(card);
     }
 
     public boolean removePlayedCard(ICard card) {
-        return true;
+        return handCards.removeCard(card);                
     }
 
     public boolean hasHandCard(ICard card) {
-        return true;
+        return handCards.hasCard(card);
     }
 
     /*

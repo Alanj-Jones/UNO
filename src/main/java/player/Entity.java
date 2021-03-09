@@ -3,7 +3,12 @@ package src.main.java.player;
 import java.util.UUID;
 
 public class Entity {
-    public Entity(UUID id) {
+    
+    protected Entity() {
+        this(UUID.randomUUID());
+    }
+
+    protected Entity(UUID id) {
         this.id = id;
     }
 
