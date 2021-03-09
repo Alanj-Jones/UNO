@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class NumberCard extends AbstractCard{
 
-    public NumberCard(CardType type, CardColor color, int number) {
-        super(type, color);
+    public NumberCard(CardColor color, int number) {
+        super(CardType.NUMBER, color);
         CardUtil.validateColor(color);
         CardUtil.validateNumber(number);
         this.value = number;
