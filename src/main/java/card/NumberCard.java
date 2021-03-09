@@ -1,31 +1,42 @@
 package src.main.java.card;
 
-public class NumberCard extends AbstractCard{
-    // TODO
-    // final value
-    // getValue() ->int
+import java.util.Objects;
 
-    public NumberCard(CardType type, CardColor color) {
+public class NumberCard extends AbstractCard{
+
+    public NumberCard(CardType type, CardColor color, int number) {
         super(type, color);
-        //TODO Auto-generated constructor stub
+        CardUtil.validateColor(color);
+        CardUtil.validateNumber(number);
+        this.value = number;
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO Auto-generated method stub
+        if (this == o) {
+            return true;
+        }
         return false;
     }
 
     @Override
     public int hashCode() {
-        // TODO Auto-generated method stub
-        return 0;
+        return Objects.hash(getType(),getColor(),getValue());
     }
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return null;
+        return "Card {" +
+                getType() + ", " +
+                getColor() + ", " +
+                getValue() + "}" ;
+
     }
+
+    public int getValue() {
+        return this.value;
+    }
+
+    private final int value;
     
 }
