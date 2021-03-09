@@ -1,28 +1,30 @@
 package src.main.java.card;
 
+import java.util.Objects;
+
 public class ActionCard extends AbstractCard {
 
     public ActionCard(CardType type, CardColor color) {
         super(type, color);
-        //TODO Auto-generated constructor stub
+        CardUtil.validateActionType(type);
+        CardUtil.validateColor(color);
     }
 
     @Override
     public boolean equals(Object o) {
-        // TODO Auto-generated method stub
-        return false;
+        return o == this;
     }
 
     @Override
     public int hashCode() {
-        // TODO Auto-generated method stub
-        return 0;
+        return Objects.hash(getColor(), getType());
     }
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
-        return null;
+        return "Action Card {" + 
+                getColor() + ", " +
+                getType() + "}" ;
     }
     
 }
