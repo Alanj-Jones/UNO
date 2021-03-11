@@ -1,10 +1,10 @@
-package src.main.java.player;
+package main.java.player;
 
 import java.util.UUID;
 import java.util.stream.Stream;
 
-import src.main.java.card.CardUtil;
-import src.main.java.card.ICard;
+import main.java.card.CardUtil;
+import main.java.card.ICard;
 
 public class Player extends Entity{
 

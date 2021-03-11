@@ -1,12 +1,12 @@
-package src.main.java.player;
+package main.java.player;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import src.main.java.card.CardType;
-import src.main.java.card.CardUtil;
-import src.main.java.card.ICard;
+import main.java.card.CardType;
+import main.java.card.CardUtil;
+import main.java.card.ICard;
 
 public class HandCardList {
 

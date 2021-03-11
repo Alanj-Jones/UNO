@@ -1,4 +1,4 @@
-package src.main.java.card;
+package main.java.card;
 
 public class CardUtil {
     // Validate color ->Card Color          void

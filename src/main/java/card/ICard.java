@@ -1,4 +1,4 @@
-package src.main.java.card;
+package main.java.card;
 
 public interface ICard {
     CardType getType();

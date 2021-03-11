@@ -1,4 +1,4 @@
-package src.main.java.player;
+package main.java.player;
 
 import java.util.UUID;
 
