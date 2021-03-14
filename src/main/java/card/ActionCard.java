@@ -12,7 +12,10 @@ public class ActionCard extends AbstractCard {
 
     @Override
     public boolean equals(Object o) {
-        return o == this;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ActionCard that = (ActionCard) o;
+        return getType() == that.getType() && getColor() == that.getColor();
     }
 
     @Override
