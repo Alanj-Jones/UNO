@@ -6,12 +6,10 @@ import java.util.Objects;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.io.TempDir;
 
 import card.ActionCard;
 import card.CardColor;
 import card.CardType;
-import card.NumberCard;
 
 public class ActionCardTest {
 
@@ -63,7 +61,6 @@ public class ActionCardTest {
 
     @Test
     public void testNotEquals() {
-        assertFalse(aCard.equals(new NumberCard(CardColor.YELLOW, 9)));
         assertFalse(aCard.equals(new ActionCard(CardType.DRAW_TWO, CardColor.RED)));
     }
 

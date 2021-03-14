@@ -16,12 +16,15 @@ public class WildCard extends AbstractCard {
 
     @Override
     public boolean equals(Object o) {
-        return (this == o);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        WildCard wildCard = (WildCard) o;
+        return getType() == wildCard.getType() && getColor() == wildCard.getColor();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getType(),getColor());
+        return Objects.hash(getColor(), getType());
     }
 
     @Override
