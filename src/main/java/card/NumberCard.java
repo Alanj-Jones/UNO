@@ -13,10 +13,10 @@ public class NumberCard extends AbstractCard{
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        return false;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        NumberCard numberCard = (NumberCard) o;
+        return value == numberCard.value && getColor() == numberCard.getColor();
     }
 
     @Override
