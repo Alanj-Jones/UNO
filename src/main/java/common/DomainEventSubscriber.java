@@ -1,5 +1,5 @@
 package common;
 
-public class DomainEventSubscriber {
-    
+public interface DomainEventSubscriber {
+    void handleEvent(DomainEvent dEvent);
 }
